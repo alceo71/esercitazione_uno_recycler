@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutEsterno"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- PIANETI ROCCIOSI -->
+
+
+    <ImageView
+        android:id="@+id/ic_mercurio"
+        android:layout_width="0dp"
+        android:layout_height="18dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/mercurio"
+        android:onClick="clickSuPianeta"
+        app:layout_constraintBottom_toTopOf="@+id/ic_giove"
+        app:layout_constraintEnd_toStartOf="@+id/ic_venere"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_mercurio" />
+
+
+    <ImageView
+        android:id="@+id/ic_venere"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:contentDescription="@string/venere"
+        android:onClick="clickSuPianeta"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_mercurio"
+        app:layout_constraintEnd_toStartOf="@+id/ic_terra"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ic_mercurio"
+        app:layout_constraintTop_toTopOf="@+id/ic_mercurio"
+        app:srcCompat="@drawable/ic_venere" />
+
+    <ImageView
+        android:id="@+id/ic_terra"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:contentDescription="@string/terra"
+        android:onClick="clickSuPianeta"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_venere"
+        app:layout_constraintEnd_toStartOf="@+id/ic_marte"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ic_venere"
+        app:layout_constraintTop_toTopOf="@+id/ic_venere"
+        app:srcCompat="@drawable/ic_terra" />
+
+
+    <ImageView
+        android:id="@+id/ic_marte"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:contentDescription="@string/marte"
+        android:onClick="clickSuPianeta"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_terra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ic_terra"
+        app:layout_constraintTop_toTopOf="@+id/ic_terra"
+        app:srcCompat="@drawable/ic_marte" />
+
+    <!-- PIANETI GIOVIANI -->
+
+    <ImageView
+        android:id="@+id/ic_giove"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/giove"
+        android:onClick="clickSuPianeta"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ic_saturno"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_giove" />
+
+    <ImageView
+        android:id="@+id/ic_saturno"
+        android:layout_width="0dp"
+        android:layout_height="67dp"
+        android:contentDescription="@string/saturno"
+        android:onClick="clickSuPianeta"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_giove"
+        app:layout_constraintEnd_toStartOf="@+id/ic_urano"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ic_giove"
+        app:layout_constraintTop_toTopOf="@+id/ic_giove"
+        app:srcCompat="@drawable/ic_saturno" />
+
+    <ImageView
+        android:id="@+id/ic_urano"
+        android:layout_width="0dp"
+        android:layout_height="29dp"
+        android:contentDescription="@string/urano"
+        android:onClick="clickSuPianeta"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_saturno"
+        app:layout_constraintEnd_toStartOf="@+id/ic_nettuno"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ic_saturno"
+        app:layout_constraintTop_toTopOf="@+id/ic_saturno"
+        app:srcCompat="@drawable/ic_urano" />
+
+    <ImageView
+        android:id="@+id/ic_nettuno"
+        android:layout_width="0dp"
+        android:layout_height="27dp"
+        android:contentDescription="@string/nettuno"
+        android:onClick="clickSuPianeta"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_urano"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ic_urano"
+        app:layout_constraintTop_toTopOf="@+id/ic_urano"
+        app:srcCompat="@drawable/ic_nettuno" />
+
+
+    <!-- Immagine grande -->
+
+    <ImageView
+        android:id="@+id/immagine_grande"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/panoramica_pianeti"
+        android:scaleType="centerInside"
+        android:background="@android:color/black"
+        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pianeti" />
+
+    <TextView
+        android:id="@+id/titolo"
+        style="@style/titolo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/titolo"
+        app:layout_constraintBottom_toBottomOf="@+id/immagine_grande"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/immagine_grande" />
+
+
+
+
+
+    <!-- Gruppo utilizzato per nascondere o mostrare le informazioni su un pianeta -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/informazioni_pianeta"
+        android:scrollbars="vertical"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titolo"
+        app:layout_constraintBottom_toTopOf="@id/ic_terra"
+        android:layout_width="0dp"
+        android:layout_height="0dp"></androidx.recyclerview.widget.RecyclerView>
+
+
+
+    <TextView
+        android:id="@+id/intro_p1"
+        style="@style/introduzione"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/introduzione_p1"
+        app:layout_constraintBottom_toTopOf="@id/intro_p2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titolo" />
+
+    <TextView
+        android:id="@+id/intro_p2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/introduzione_p2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/intro_p3"
+        app:layout_constraintTop_toBottomOf="@id/intro_p1"
+        style="@style/introduzione"/>
+
+    <TextView
+        android:id="@+id/intro_p3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="web"
+        android:text="@string/introduzione_p3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/ic_venere"
+        app:layout_constraintTop_toBottomOf="@id/intro_p2"
+        style="@style/introduzione"/>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/introduzione"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="intro_p1,intro_p2,intro_p3" />
+
+
+    <ImageView
+        android:id="@+id/iconaSelezione"
+        android:visibility="invisible"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:srcCompat="@drawable/ic_selezionato"
+        app:layout_constraintStart_toStartOf="@id/ic_giove"
+        app:layout_constraintEnd_toEndOf="@id/ic_giove"
+        app:layout_constraintTop_toTopOf="@id/ic_giove"
+        app:layout_constraintBottom_toBottomOf="@id/ic_giove"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

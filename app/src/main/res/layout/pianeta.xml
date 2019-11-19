@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Etichette -->
+
+    <TextView
+        android:id="@+id/distanza"
+        style="@style/etichetta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/distanza"
+        app:layout_constraintBottom_toTopOf="@+id/massa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/massa"
+        style="@style/etichetta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/massa"
+        app:layout_constraintBottom_toTopOf="@+id/rotazione"
+        app:layout_constraintEnd_toEndOf="@+id/distanza"
+        app:layout_constraintTop_toBottomOf="@+id/distanza" />
+
+    <TextView
+        android:id="@+id/rotazione"
+        style="@style/etichetta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rotazione"
+        app:layout_constraintBottom_toTopOf="@+id/rivoluzione"
+        app:layout_constraintEnd_toEndOf="@+id/massa"
+        app:layout_constraintTop_toBottomOf="@+id/massa" />
+
+    <TextView
+        android:id="@+id/rivoluzione"
+        style="@style/etichetta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rivoluzione"
+        app:layout_constraintBottom_toTopOf="@+id/diametro"
+        app:layout_constraintEnd_toEndOf="@+id/rotazione"
+        app:layout_constraintTop_toBottomOf="@+id/rotazione" />
+
+    <TextView
+        android:id="@+id/diametro"
+        style="@style/etichetta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/diametro"
+        app:layout_constraintBottom_toTopOf="@+id/satelliti"
+        app:layout_constraintEnd_toEndOf="@+id/rivoluzione"
+        app:layout_constraintTop_toBottomOf="@+id/rivoluzione"
+        app:layout_constraintVertical_bias="0.636" />
+
+    <TextView
+        android:id="@+id/satelliti"
+        style="@style/etichetta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/satelliti"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/diametro"
+        app:layout_constraintTop_toBottomOf="@+id/diametro" />
+
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barriere_etichette"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="distanza,rivoluzione,rotazione,massa,diametro,satelliti" />
+
+
+    <!-- Valori -->
+    <TextView
+        android:id="@+id/distanza_valore"
+        style="@style/valore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/distanza"
+        app:layout_constraintBaseline_toBaselineOf="@+id/distanza"
+        app:layout_constraintStart_toStartOf="@+id/barriere_etichette" />
+
+    <TextView
+        android:id="@+id/massa_valore"
+        style="@style/valore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/massa"
+        app:layout_constraintBaseline_toBaselineOf="@+id/massa"
+        app:layout_constraintStart_toStartOf="@+id/barriere_etichette" />
+
+
+    <TextView
+        android:id="@+id/rotazione_valore"
+        style="@style/valore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rotazione"
+        app:layout_constraintBaseline_toBaselineOf="@+id/rotazione"
+        app:layout_constraintStart_toStartOf="@+id/barriere_etichette" />
+
+
+    <TextView
+        android:id="@+id/rivoluzione_valore"
+        style="@style/valore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rivoluzione"
+        app:layout_constraintBaseline_toBaselineOf="@+id/rivoluzione"
+        app:layout_constraintStart_toStartOf="@+id/barriere_etichette" />
+
+    <TextView
+        android:id="@+id/diametro_valore"
+        style="@style/valore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/diametro"
+        app:layout_constraintBaseline_toBaselineOf="@+id/diametro"
+        app:layout_constraintStart_toStartOf="@+id/barriere_etichette" />
+
+    <TextView
+        android:id="@+id/satelliti_valore"
+        style="@style/valore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/satelliti"
+        app:layout_constraintBaseline_toBaselineOf="@+id/satelliti"
+        app:layout_constraintStart_toStartOf="@+id/barriere_etichette" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
